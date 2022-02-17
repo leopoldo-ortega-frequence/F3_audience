@@ -97,7 +97,7 @@ function createData() {
       "AUTOS & VEHICLES",
       "VEHICLE SHOPPING",
     ],
-    5,
+    20,
     30
   );
 }
