@@ -171,6 +171,17 @@ img {
   stroke: white;
 }
 
+.svg-text {
+  font-size: 10px;
+  height: 100%;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15%;
+}
+
 /* General Comp chart */
 .population-container .y-axis,
 .population-container .y-axis .tick {

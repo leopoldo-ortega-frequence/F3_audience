@@ -108,22 +108,47 @@ export const treeMapChart = (selector, props) => {
         return `fill-${colorScale(d.data.group)}`;
       });
 
+    // treeGraphG
+    //   .selectAll("text")
+    //   .data(root.leaves())
+    //   .enter()
+    //   .append("text")
+    //   .attr("x", function (d) {
+    //     return d.x0 + 5;
+    //   }) // +10 to adjust position (more right)
+    //   .attr("y", function (d) {
+    //     return d.y0 + 20;
+    //   }) // +20 to adjust position (lower)
+    //   .text(function (d) {
+    //     return d.data.name;
+    //   })
+    //   .attr("font-size", "10px")
+    //   .attr("fill", "white");
     treeGraphG
-      .selectAll("text")
+      .selectAll(".node-text")
       .data(root.leaves())
       .enter()
-      .append("text")
+      .append("foreignObject")
+      .attr("class", "node-text")
+      .attr("width", function (d) {
+        return d.x1 - d.x0;
+      })
+      .attr("height", function (d) {
+        return d.y1 - d.y0;
+      })
       .attr("x", function (d) {
-        return d.x0 + 5;
+        return d.x0;
       }) // +10 to adjust position (more right)
       .attr("y", function (d) {
-        return d.y0 + 20;
-      }) // +20 to adjust position (lower)
-      .text(function (d) {
-        return d.data.name;
+        return d.y0;
       })
-      .attr("font-size", "10px")
-      .attr("fill", "white");
+      .append("xhtml:div")
+      .attr("class", "svg-text")
+      .append("span")
+      .html((d) => d.data.name); // +20 to adjust position (lower)
+    // .text(function (d) {
+    //   return d.data.name;
+    // });
   };
 
   render();
