@@ -172,14 +172,14 @@ img {
 }
 
 .svg-text {
-  font-size: 10px;
+  font-size: 9px;
   height: 100%;
   width: 100%;
   color: white;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15%;
 }
 
 /* General Comp chart */

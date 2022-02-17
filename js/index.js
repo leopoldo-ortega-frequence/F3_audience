@@ -90,15 +90,15 @@ function createData() {
       "EDUCATION",
       "FOOD & DRINK",
       "ETHNIC & IDENTITY GROUPS",
-      "VEAUTY & FITNESS",
+      "BEAUTY & FITNESS",
       "ARTS & ENTERTAINMENT",
       "GAMBLING",
       "FINANCE",
       "AUTOS & VEHICLES",
       "VEHICLE SHOPPING",
     ],
-    20,
-    30
+    5,
+    10
   );
 }
 
