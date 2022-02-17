@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/app.css" />
+    <title>F3 - Audience</title>
+  </head>
+  <body>
+    <div id="user-tools">
+      <div id="color-tool">
+        <div class="tool-icon">
+          <i class="fa-solid fa-droplet"></i>
+        </div>
+        <div id="color-list"></div>
+      </div>
+    </div>
+
+    <div id="slide-container">
+      <!-- HEADER -->
+      <div class="header">
+        <div class="slide-colors">
+          <div class="quarter bg-primary"></div>
+          <div class="quarter bg-tertiary"></div>
+          <div class="quarter bg-quaternary"></div>
+          <div class="quarter bg-dark"></div>
+        </div>
+        <div class="header-grid">
+          <div class="header-left">
+            <div class="header-main-left">
+              <div class="header-color-vertical">
+                <div class="circle-sm bg-primary"></div>
+                <div class="circle-sm bg-tertiary"></div>
+                <div class="circle-sm bg-quaternary"></div>
+                <div class="circle-sm bg-dark"></div>
+              </div>
+              <div class="header-title">
+                <h1>Subaru Service</h1>
+              </div>
+            </div>
+            <div class="header-sub">
+              <div class="circle-sm bg-quaternary"></div>
+              <span>Partner Whitelabel Sales</span>
+            </div>
+          </div>
+          <div class="header-right">
+            <div class="header-main-right">
+              <div class="image-container-header">
+                <img alt="logo" src="assets/logo.png" />
+              </div>
+            </div>
+            <div class="header-sub">
+              <div class="circle-sm bg-tertiary"></div>
+              <span class="text-light">2022-03-23</span>
+            </div>
+          </div>
+        </div>
+        <div class="header-foot">
+          <div class="bg-secondary">
+            <h2 class="text-light">DEMOGRAPHIC PROGRAMMING</h2>
+          </div>
+          <div class="bg-primary">
+            <h2 class="text-light">Audience Visualization</h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- SVG Graphs go here -->
+      <div id="slide-content"></div>
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>

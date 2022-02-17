@@ -1,0 +1,12 @@
+{
+  "children": [
+    { "group": "demographic", "value": 5 },
+    { "group": "Industry", "value": 19 },
+    { "group": "Interests", "value": 18 },
+    { "group": "Multiple", "value": 19 },
+    { "group": "demographic", "value": 28 },
+    { "group": "Industry", "value": 19 },
+    { "group": "Interests", "value": 18 },
+    { "group": "Multiple", "value": 19 }
+  ]
+}
