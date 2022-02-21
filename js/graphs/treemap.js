@@ -108,22 +108,7 @@ export const treeMapChart = (selector, props) => {
         return `fill-${colorScale(d.data.group)}`;
       });
 
-    // treeGraphG
-    //   .selectAll("text")
-    //   .data(root.leaves())
-    //   .enter()
-    //   .append("text")
-    //   .attr("x", function (d) {
-    //     return d.x0 + 5;
-    //   }) // +10 to adjust position (more right)
-    //   .attr("y", function (d) {
-    //     return d.y0 + 20;
-    //   }) // +20 to adjust position (lower)
-    //   .text(function (d) {
-    //     return d.data.name;
-    //   })
-    //   .attr("font-size", "10px")
-    //   .attr("fill", "white");
+
     treeGraphG
       .selectAll(".node-text")
       .data(root.leaves())
@@ -145,6 +130,11 @@ export const treeMapChart = (selector, props) => {
       .append("xhtml:div")
       .attr("class", "svg-text")
       .append("span")
+      .style('font-size', (d,i) => {
+        const width = d.x1 - d.x0;
+        const fontSize = Math.floor(width / 8)
+       return  `${fontSize}px`
+      })
       .html((d) => d.data.name); // +20 to adjust position (lower)
     // .text(function (d) {
     //   return d.data.name;
